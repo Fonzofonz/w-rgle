@@ -10,7 +10,7 @@ class HelloHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header("Content-type", "text/html")
         self.end_headers()
         # Schreibe den Inhalt der Webseite
-        self.wfile.write(b"Hello, World!")
+        self.wfile.write(b"Hello, World oder so!")
 
 with socketserver.TCPServer(("", PORT), HelloHandler) as httpd:
     print(f"Serving on port {PORT}")
